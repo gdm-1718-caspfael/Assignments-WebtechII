@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>oef 2 Week 5</title>
+</head>
+<body>
+<div id="books"></div>
+
+
+
+
+
+<script>
+    let books = [
+{title: 'Harry Potter',
+author: 'J.K. Rowling',
+alreadyRead: false
+},
+{title: 'Jane Eyre',
+author: 'Charlotte Brontë',
+alreadyRead: true
+},
+{title: 'De verschrikkelijke schoolmeester.',
+author: 'Dolf Verroen',
+alreadyRead: true
+}
+];
+let divBooks = document.getElementById('books');
+for (let i = 0; i < books.length; i++) {
+    if (books[i].alreadyRead== true) {
+    document.write('you read ' +books[i].title);
+} else {
+    document.write("you didn't read " +books[i].title)
+}
+    document.write('<br>');
+};
+
+console.log(books[2].author)
+
+
+
+//constructor book
+let Book = function (title, author, alreadyRead) {
+    this.title = name,
+    this.author = author,
+    this.alreadyRead= alreadyRead,
+    this.output = function(){
+     if (this.alreadyRead) {
+         return "al gelezen"
+     } else {
+         return 'nog niet gelezen'
+     }     
+    }
+}
+
+let myFavoriteBook = new Book ('Twilight','Stephenie Meyer', false);
+console.log(myFavoriteBook.output());
+</script>
+    
+</body>
+</html>

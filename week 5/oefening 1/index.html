@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oefening 1 W5</title>
+</head>
+<body>
+   
+   
+   <div id="recipe"></div>
+   
+   
+   
+   
+   
+   
+   
+   
+   <script>
+        //object vb
+    let person = {
+            hairColor: 'brown',
+            height: 203,
+            gender: 'male',
+            firstname: 'Yentl',
+            lastname: 'Ringoot',
+            adult: true,
+            shoes: { 
+                brand: 'Adidas',
+                color: 'white'
+            }
+    }
+//oefening 1
+let recept = {
+    gerecht: 'soep',
+    portions: '4',
+    ingredients: ['wortel','pompoen','aardappel','nog dingen'],
+        
+    }
+console.log(recept);
+
+//vb klas
+let recipe ={
+    name: "Pizza Margharita",
+    servings: 2,
+    difficulty: 'easy peasy',
+    ingredients: [
+        'cheese',
+        'dough',
+        'tomato sauce',
+        'Basil',
+        'Garlic'
+    ]
+};
+let divRecipe = document.getElementById('recipe');
+
+divRecipe.innerHTML ='<h2>'+recipe.name+'<h2>';
+divRecipe.innerHTML+= '<p>'+ recipe.servings+'<p>';
+divRecipe.innerHTML+= '<p>'+ recipe.difficulty+'<p>';
+
+divRecipe.innerHTML += '<ul>';
+for (let i = 0; i < recipe.ingredients.length; i++) {
+    divRecipe.innerHTML += "<li>" + recipe.ingredients[i]+"</li>" ;
+    
+}
+divRecipe.innerHTML += '</ul>';
+
+
+    </script>
+</body>
+</html>

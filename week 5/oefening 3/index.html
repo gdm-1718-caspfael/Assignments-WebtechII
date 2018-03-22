@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oefening 3 WK 5</title>
+</head>
+<body>
+    <script>
+let dog= {
+    breed: 'husky',
+    name: 'sukkel',
+    color: 'white',
+    age: 5,
+    gender: 'male',
+    colorEyes: function(){
+        return 'brown'
+    }
+};    
+
+
+const now=new Date();
+const year= now.getFullYear;
+
+let Doggo = function (breed, name, color, age, gender, birthyear){
+    this.breed = breed,
+    this.name = name,
+    this.color = color,
+    this.age = age,
+    this.gender = gender
+    this.colorEyes = function (){
+        return 'pink'
+    }
+    this.birthyear = function (){
+        let birthyear=year-this.age;
+        return birthyear
+    };
+}
+let myFavoriteDog = new Doggo ('Collie', 'Lassie','brown and black', '6' ,'male' );
+console.log(myFavoriteDog);
+document.write(myFavoriteDog);
+MyFavoriteDog.bestToyEver= 'een mooie rode bal';
+// functie toevoegen aan de constructor
+// zonder constructor zelf wijzigen
+Dog.prototype.speak = function (line) {
+    let slogan = 'De ' + this.breed + 'hond zeget: ' + line;
+}
+
+let saySomething = myFavoriteDog.speak("Er klopt iemand aan de deur")
+console.log(saySomething);
+    </script>
+</body>
+</html>

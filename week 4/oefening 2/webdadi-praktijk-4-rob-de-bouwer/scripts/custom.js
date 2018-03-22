@@ -79,6 +79,31 @@ function helpRobCalculate (){
     document.getElementById('cost-orange').innerHTML='€ '+ (amountOrange.length*9);
     document.getElementById('cost-blue').innerHTML='€ '+ (amountBlue.length*0.30);
     document.getElementById('cost-total').innerHTML='€ '+(costYellow + costBlack +costOrange +costBlue);
+
+    let biggest = 0;
+    let biggestWall;
+    if(amountYellow.length > biggest) {
+        biggest = amountYellow.length;
+        biggestWall = 'geel';
+    }
+    
+    if(amountBlack.length > biggest) {
+        biggest = amountBlack.length;
+        biggestWall = 'zwart';
+    }
+
+    if(amountOrange.length > biggest) {
+        biggest = amountOrange.length;
+        biggestWall = 'oranje';
+    }
+
+    if(amountBlue.length > biggest) {
+        biggest = amountBlue.length;
+        biggestWall = 'blauw';
+    }
+
+    document.getElementById('wall-biggest') .innerHTML='De ' + biggestWall + ' muur is het grootst.' 
+/*
 //de grootste bepalen
     if (Math.max(amountBricks=amountYellow.length)) {
      document.getElementById('wall-biggest') .innerHTML='De gele muur is het grootst.'  
@@ -86,13 +111,13 @@ function helpRobCalculate (){
         document.getElementById('wall-biggest') .innerHTML='De zwarte muur is het grootst.'  
         if (Math.max(amountBricks=amountOrange.length)) {
             document.getElementById('wall-biggest') .innerHTML='De oranje muur is het grootst.' 
-            if (Math.max(amountBricks=amountBlue.length)) {
+            if(Math.max(amountBricks=amountBlue.length)) {
                 document.getElementById('wall-biggest') .innerHTML='De blauwe muur is het grootst.'  
                } 
            }
        }
     }
-    
+    */
     
     
 }
