@@ -1,9 +1,10 @@
+// functie expressie om JSON-request via url uit te voeren
 const getJSON = function(url, callback) {
-    let xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
     xhr.onload = function() {
-      let status = xhr.status;
+      var status = xhr.status;
       if (status === 200) {
         callback(null, xhr.response);
       } else {
@@ -13,9 +14,13 @@ const getJSON = function(url, callback) {
     xhr.send();
 };
 
-getJSON('https://evelienrutsaert.github.io/recourses/recipes.json'), function(error,data){
 
-for (let i = 0; i < data.length; i++) {
-    console.log(data);
-    
-}};
+getJSON('https://evelienrutsaert.github.io/recourses/recipes.json', function(error,data){
+    if (error) {
+        return error;
+    }
+    for (let i = 0; i < data.length; i++) {
+        console.log(data);
+        
+    }
+});
