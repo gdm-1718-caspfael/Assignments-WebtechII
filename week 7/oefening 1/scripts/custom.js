@@ -64,6 +64,7 @@ button.addEventListener('click', function() {
 
         //schrijf de fact in het venster
         //document.write('<li>'+data.value.joke+'</li>');
+        //als je een element in de DOM wilt toevoegen, heb je deze stappen nodig
         const listItem =  document.createElement('li');
         listItem.textContent = data.value.joke;
         factslist.appendChild(listItem);
